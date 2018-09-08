@@ -17,6 +17,25 @@ ACCESS_TOKEN = globals_secret.ACCESS_TOKEN
 ACCESS_TOKEN_SECRET = globals_secret.ACCESS_TOKEN_SECRET
 
 
+def getHandle():
+	username = input("Enter a Twitter Handle: ")
+	return username
+
+def getUsersTweets(user, api):
+	user_tweets = api.user_timeline(user)
+	for tweet in user_tweets:
+		print (tweet.text)
+		print ("Tweet id: "+ str(tweet.id))
+		print ("Tweet created_at: " + str(tweet.created_at) + "\n")
+
+
+
+def printTweetsFromTimeLine(api):
+	public_tweets = api.home_timeline()
+	for tweet in public_tweets:
+		print ("\n")
+		print (tweet.text)
+
 def main():
 	print (" \n Hello World \n")
 	print ("Beginning the Tweepy Test\n\n")
@@ -26,11 +45,11 @@ def main():
 
 	api = tweepy.API(auth)
 
-	public_tweets = api.home_timeline()
-	for tweet in public_tweets:
-		print ("\n")
-		print (tweet.text)
+	#printTweetsFromTimeLine(api)
 
+	user = getHandle()
+	print ("\n User: "+ user + "\n")
+	getUsersTweets(user, api)
 
 main()
 

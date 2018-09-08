@@ -18,3 +18,6 @@ First Repo to relearn GitHub, Git, and Python. Practice using new APIs.
 	It will show the location Python is installed. I do not recommend changing PATH to use Python3
 
 	Instead just do: "which python3". If you get a result then it is installed. Whenever you want to run a Python script just run: "python3 <SCRIPT NAME>" instead of "python <SCRIPT_NAME>"
+
+#Documentation for the Tweepy API
+https://tweepy.readthedocs.io/en/v3.6.0/api.html
