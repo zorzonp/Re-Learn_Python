@@ -8,12 +8,13 @@
 ####################################################################
 
 import tweepy
+import globals_secret
 
 #this is the consumer key and secret, needed to authenticate with Twitter
-CONSUMER_KEY = "O0FbWZf9VbNKom7LM0UvZJLst"
-CONSUMER_SECRET = "s3nL8fORzmqjlTKQfvhlpsC8wGwXwGUard06gPJXaFmrunsEMN"
-ACCESS_TOKEN = "804969750-yn7Yl2fKXcQzRLeTDGMYbPpdtbpfQb2ky31R114Z"
-ACCESS_TOKEN_SECRET = "ZDb2nMfYIQ1I0TbK8HQFzCsUHKsjPuxdSPwx03k0mBvgJ"
+CONSUMER_KEY = globals_secret.CONSUMER_KEY
+CONSUMER_SECRET = globals_secret.CONSUMER_SECRET
+ACCESS_TOKEN = globals_secret.ACCESS_TOKEN
+ACCESS_TOKEN_SECRET = globals_secret.ACCESS_TOKEN_SECRET
 
 
 def main():
